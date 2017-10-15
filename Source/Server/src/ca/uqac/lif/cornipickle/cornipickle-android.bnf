@@ -25,7 +25,7 @@
 <css_attribute>      := nodeValue | value | height | width | top | left | right
                         | bottom | color | id | text | background | border 
                         | event | cornipickleid | display | size | accesskey 
-                        | checked | disabled | min | menuItemText | length | bgcolor | parent | widthdp | heightdb | position;
+                        | checked | disabled | min | menuItemText | length | bgcolor | parent | widthdp | heightdb | position | name;
                         
 # Page attributes
 

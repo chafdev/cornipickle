@@ -130,6 +130,7 @@ class DummyImageMobile extends InterpreterCallback
   	//j = s_jsonParser.parse(attributes.toString().substring(2,attributes.toString().length()-1 ));
       if(attributes.get("interpreter") != null)
       {
+    	  String st=URLDecoder.decode(attributes.get("interpreter"));
     	 // System.out.println("nombre: "+URLDecoder.decode(attributes.get("interpreter"), "UTF-8").length());
     	  m_interpreter = m_interpreter.restoreFromMemento(URLDecoder.decode(attributes.get("interpreter").toString(), "UTF-8"));
     	  
