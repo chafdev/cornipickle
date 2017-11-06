@@ -123,7 +123,7 @@ public class CssSelector extends SetExpression
 		String el_tag_name = "";
 		String el_class_name = "";
 		String el_id_name = "";
-		if (Main._plateforme == Main.PlatformType.android_native)
+		if (Main._plateforme == Main.PlatformType.android_native || Main._plateforme==Main.PlatformType.unity3d)
 		{
 			
 			el_tag_name = JsonPath.getString(root, "element");// tagname //																// element

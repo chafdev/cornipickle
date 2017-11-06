@@ -76,7 +76,7 @@ public class CornipickleParser implements ParseNodeVisitor
 
 	protected static InputStream getGrammarStream()
 	{
-		if (Main._plateforme == Main.PlatformType.android_native)
+		if (Main._plateforme == Main.PlatformType.android_native || Main._plateforme==Main.PlatformType.unity3d)
 		{
 			return CornipickleParser.class.getResourceAsStream("cornipickle-android.bnf");
 		}

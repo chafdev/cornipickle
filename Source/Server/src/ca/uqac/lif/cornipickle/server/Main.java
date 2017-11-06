@@ -66,9 +66,10 @@ public class Main
 	 */
 	protected static int s_verbosity = 1;
 	
-	public enum PlatformType { web, android_native };
+	public enum PlatformType { web, android_native,unity3d };
 	
-	public static PlatformType _plateforme = PlatformType.web;
+	public static PlatformType _plateforme = PlatformType.unity3d;
+	//public static PlatformType _plateforme = PlatformType.web;
 
 	/**
 	 * Main method
@@ -225,6 +226,13 @@ public class Main
 				.desc("Change platform type")
 				.build();
 		options.addOption(opt);
+		opt = Option.builder("u")
+				.longOpt("unity3d")
+				//.argName("x")
+				//.hasArg()
+				.desc("Change platform type")
+				.build();
+		options.addOption(opt);
 		return options;
 	}
 
@@ -266,7 +274,7 @@ public class Main
 
 	private static void showHeader(PrintStream out)
 	{
-		out.println("Cornipickle, a "+ _plateforme +" oracle");
+		out.println("Cornipickle, for "+ _plateforme +" oracle");
 		out.println("Version " + VERSION_STRING + ", build " + BUILD_STRING);
 	}
 
